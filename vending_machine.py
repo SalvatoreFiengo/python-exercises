@@ -29,10 +29,8 @@ def get_change(amount, coins=eur_coins):
     current_coins_available = dict_from_list(coins, 2, 1)
     
     for coin in sorted(current_coins_available, reverse=True):
-        print(current_coins_available)
         while coin <= amount:
             if current_coins_available[coin]>0:
-                print("{0} is {1}".format(coin,current_coins_available[coin]))
                 current_coins = current_coins_available[coin]
                 amount -= coin
                 change.append(coin)
